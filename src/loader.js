@@ -107,6 +107,7 @@ export default (
     layers,
     sorting,
     appearances,
+    booksRead,
   },
   defaultSettings,
 ) => {
@@ -184,6 +185,7 @@ export default (
         ...b,
         categories: bookCategories,
         appearances: bookAppearances,
+        read: booksRead.includes(b.id),
         angle,
         get active() {
           return bookCategories.reduce((active, c) => active && c.active, true);

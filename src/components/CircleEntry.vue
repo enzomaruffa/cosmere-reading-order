@@ -10,10 +10,18 @@
   >
     <slot></slot>
   </text>
+  <Appearance
+  v-if="entry.read"
+    ref="readAppearance"
+    :appearance="{ type: 'appearance', description: '...', ref: { color: 'green', initial: 'R' } }"
+    :position="-1"
+    :transform="`translate(0, -${radius + renderedPadding + textWidth + 15}) \
+                rotate(${-renderedAngle})`"
+  ></Appearance>
   <AppearanceGroup
     :appearances="entry.appearances.filter(a => a.ref.active)"
     :rotation="-renderedAngle"
-    :transform="`translate(0, -${radius + renderedPadding + textWidth + 15})`"
+    :transform="`translate(0, -${radius + renderedPadding + textWidth + 40})`"
     v-if="textWidth >= 0"
   ></AppearanceGroup>
 </g>
@@ -23,10 +31,11 @@
 import { TweenLite } from 'gsap/gsap-core';
 import { anyComponent, normalizeAngle } from '@/utils';
 import AppearanceGroup from '@/components/AppearanceGroup.vue';
+import Appearance from '@/components/Appearance.vue';
 
 export default {
   name: 'CircleEntry',
-  components: { AppearanceGroup },
+  components: { AppearanceGroup, Appearance },
   props: {
     entry: Object,
     angle: Number,

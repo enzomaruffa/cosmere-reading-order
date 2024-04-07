@@ -1,5 +1,13 @@
 {
 	"base-separation": 3.13,
+	"booksRead": [
+		"elantris",
+		"mb1",
+		"mb2",
+		"mb3",
+		"wb",
+		"sa1"
+	],
 	"connections": [
 		{
 			"id": "major",
