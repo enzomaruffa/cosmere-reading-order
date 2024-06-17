@@ -1,12 +1,25 @@
 {
 	"base-separation": 3.13,
 	"booksRead": [
-		"elantris",
 		"mb1",
 		"mb2",
 		"mb3",
+		"elantris",
 		"wb",
-		"sa1"
+		"sa1",
+		"sa2",
+		"sa2.5",
+		"sa3",
+		"mb4",
+		"mb5",
+		"mb6",
+		"msh",
+		"sa3.5",
+		"sa4",
+		"tes",
+		"thoe",
+		"11m",
+		"jak"
 	],
 	"connections": [
 		{

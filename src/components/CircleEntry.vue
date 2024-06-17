@@ -21,7 +21,7 @@
   <AppearanceGroup
     :appearances="entry.appearances.filter(a => a.ref.active)"
     :rotation="-renderedAngle"
-    :transform="`translate(0, -${radius + renderedPadding + textWidth + 40})`"
+    :transform="`translate(0, -${radius + renderedPadding + textWidth + 15 + (entry.read ? 25 : 0)})`"
     v-if="textWidth >= 0"
   ></AppearanceGroup>
 </g>
